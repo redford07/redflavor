@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.vip.redfalvor.ServiceActivity">
+
+    <item
+        android:id="@+id/setuptest"
+        android:title="테스트설정">
+    </item>
+    <item
+        android:title="사용자설정"
+        android:id="@+id/setup"/>
+    <item
+        android:title="환경설정"
+        android:id="@+id/appinfo"/>
+
+
+</menu>

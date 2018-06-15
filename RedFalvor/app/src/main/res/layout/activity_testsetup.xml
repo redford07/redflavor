@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socket영역"
+            android:textSize="30dp"
+
+            android:id="@+id/socketarea"/>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/portchange"
+            android:layout_below="@+id/socketarea"
+            android:hint="포트변경"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/portchangebtn"
+            android:layout_toEndOf="@+id/portchange"
+            android:layout_alignBottom="@+id/portchange"
+            android:text="포트변경"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipchange"
+            android:layout_below="@+id/portchange"
+            android:hint="ip변경" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipchangebtn"
+            android:text="ip변경"
+            android:layout_toEndOf="@+id/ipchange"
+            android:layout_alignBottom="@+id/ipchange"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/defaultiport"
+            android:text="defalutValue(ip,port)"
+            android:layout_below="@+id/ipchangebtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UV4L영역"
+            android:textSize="30dp"
+            android:id="@+id/uv4larea"
+            android:layout_below="@id/defaultiport"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/towebviewbtn"
+            android:text="webview"
+            android:layout_below="@+id/uv4larea"/>
+
+    </RelativeLayout>
+</LinearLayout>

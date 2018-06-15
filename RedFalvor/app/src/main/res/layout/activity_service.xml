@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.vip.redfalvor.ServiceActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar">
+        <TextView
+            android:id="@+id/logintxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="SmartHomeCCTV"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="150dp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ret1">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+
+
+        <EditText
+            android:id="@+id/testuri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoView"
+            android:hint="uri 주소값입력" />
+
+        <Button
+            android:id="@+id/uribtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/testuri"
+            android:layout_alignBottom="@+id/testuri"
+            android:layout_toEndOf="@+id/testuri"
+            android:text="uri변경" />
+
+        <Button
+            android:id="@+id/defaulturibtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/uribtn"
+            android:layout_alignBottom="@+id/uribtn"
+            android:layout_toEndOf="@+id/uribtn"
+            android:text="디폴트uri" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진찍기"
+            android:id="@+id/snapshotbtn"
+            android:layout_below="@+id/defaulturibtn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="녹화하기"
+            android:id="@+id/recordbtn"
+            android:layout_toEndOf="@+id/snapshotbtn"
+            android:layout_alignBottom="@+id/snapshotbtn"
+            />
+
+        <Button
+            android:id="@+id/servoleftbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/recordbtn"
+            android:layout_alignBottom="@+id/recordbtn"
+            android:layout_toEndOf="@+id/recordbtn"
+            android:text="모터(좌)" />
+
+        <Button
+            android:id="@+id/servorightbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/defaulturibtn"
+            android:layout_toEndOf="@+id/servoleftbtn"
+            android:text="모터(우)" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카메라임포트"
+            android:id="@+id/cameraimportbtn"
+            android:layout_below="@+id/snapshotbtn"/>
+
+        <Button
+            android:id="@+id/testbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/testuri"
+            android:layout_toEndOf="@+id/defaulturibtn"
+            android:text="TEST" />
+
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/portchange"
+            android:layout_below="@+id/cameraimportbtn"
+            android:hint="포트변경"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/portchangebtn"
+            android:layout_toEndOf="@+id/portchange"
+            android:layout_alignBottom="@+id/portchange"
+            android:text="포트변경"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipchange"
+            android:layout_below="@+id/portchange"
+            android:hint="ip변경" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipchangebtn"
+            android:text="ip변경"
+            android:layout_toEndOf="@+id/ipchange"
+            android:layout_alignBottom="@+id/ipchange"/>
+
+        <Button
+            android:id="@+id/defaultiport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ipchangebtn"
+            android:layout_toEndOf="@+id/portchangebtn"
+            android:text="defalutValue(ip,port)" />
+
+
+        <Button
+            android:id="@+id/towebviewbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/portchangebtn"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/servoleftbtn"
+            android:text="webview" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
