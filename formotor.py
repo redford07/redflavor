@@ -1,16 +1,8 @@
-import RPi.GPIO as GPIO
 import socket
 import os
 import sys
 import threading
 from time import sleep
-pin = 18
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(pin, GPIO.OUT)
-p = GPIO.PWM(pin, 20)
-p.start(0)
-cnt = 0
-
 HOST = "192.168.1.25"
 PORT = 8886
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,7 +11,7 @@ s.bind((HOST, PORT))
 print ('Socket bind complete')
 s.listen(1)
 print ('Socket now listening')
-print ('streaming server on')
+
 def do_some_stuffs_with_input(input_string):
 		if input_string == "start":
 			input_string = "start recording"
